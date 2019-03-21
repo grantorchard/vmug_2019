@@ -1,5 +1,6 @@
 import requests
 import json
+from prettytable import PrettyTable
 
 url = 'https://swapi.co/api/'
 
@@ -23,3 +24,21 @@ def find_people_by_name(name):
 
 def get_films_character_was_in(name):
     pass
+
+def getdata(url):
+    r = requests.get(url)
+    if r.status_code == 200:
+        print('success!')
+        return r.json()
+    else:
+        print('Your father is disappointed in you')
+        return r.status_code
+
+def getcharacter(url, name):
+    r = requests.get(url)
+    for i in r.json()['results']:
+        if i['name'] == name:
+            return i
+        else:
+            print('Failure!')
+

@@ -28,10 +28,10 @@ def get_cody():
 def get_families():
     families = []
     families.append({
-        "Cody": 34,
-        "Shannon": 22,
-        "Hayley": 5,
-        "Morgan": 2
+        "Grant": 40,
+        "Elizabeth": None,
+        "Audrey": 8,
+        "Ewan": 4
     })
     families.append({
         "Cody": 34,
